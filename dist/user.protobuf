@@ -1,0 +1,42 @@
+syntax = "proto2";
+
+message undefined {
+  message settings {
+    optional string handedness = 1;
+    optional string ipd = 2;
+  }
+  
+  required string id = 1;
+  optional string name = 2;
+  repeated undefined avatars = 3;
+  repeated undefined contacts = 4;
+  repeated undefined assets = 5;
+}
+syntax = "proto2";
+
+message undefined {
+  message settings {
+    optional string handedness = 1;
+    optional string ipd = 2;
+  }
+  
+  required string id = 1;
+  optional string name = 2;
+  repeated undefined avatars = 3;
+  repeated undefined contacts = 4;
+  repeated undefined assets = 5;
+}
+syntax = "proto2";
+
+message undefined {
+  message settings {
+    optional string handedness = 1;
+    optional string ipd = 2;
+  }
+  
+  required string id = 1;
+  optional string name = 2;
+  repeated undefined avatars = 3;
+  repeated undefined contacts = 4;
+  repeated undefined assets = 5;
+}

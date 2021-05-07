@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "User",
+  "description": "A base user object",
+  "type": "object",
+
+  "definitions": {
+
+    "avatar": {
+      "type": "object",
+      "name": "avatar",
+      "properties": {
+        "filetype": {
+          "type": "string",
+          "enum": [
+            "VRM",
+            "FBX",
+            "VOX",
+            "GLTF",
+            "GLB",
+            "JPG",
+            "PNG",
+            "GIF",
+            "OBJ"
+          ]
+        },
+        "url": { "type": "string" }
+      }
+    },
+
+    "contact": {
+      "type": "object",
+      "name": "contact",
+      "properties": {
+        "id": {
+          "description": "UUID associated with this contact",
+          "type": "string"
+        },
+        "type": { "type": "string", "enum": ["Friend", "Blocked", "Muted"] }
+      }
+    },
+
+    "asset": {
+        "type": "object",
+        "name": "asset",
+        "properties": {
+          "filetype": {
+            "type": "string",
+            "enum": [
+              "VRM",
+              "FBX",
+              "VOX",
+              "GLTF",
+              "GLB",
+              "JPG",
+              "PNG",
+              "GIF",
+              "OBJ"
+            ]
+          },
+          "url": { "type": "string" }
+        }
+      }
+  },
+
+  "properties": {
+    "id": {
+      "description": "Unique UUID associated with this user",
+      "type": "string"
+    },
+    "name": {
+      "description": "Public name of the user",
+      "type": "string"
+    },
+
+    "settings": {
+      "title": "User Settings",
+      "type": "object",
+      "properties": {
+        "handedness": { "type": "string" },
+        "ipd": { "type": "string" }
+      }
+    },
+
+    "avatars": {
+      "title": "A list of user avatars",
+      "type": "array",
+      "items": { "$ref": "#/definitions/avatar" }
+    },
+
+    "contacts": {
+      "title": "List of user contacts",
+      "type": "array",
+      "items": { "$ref": "#/definitions/contact" }
+    },
+
+    "assets": {
+        "title": "List of user assets",
+        "type": "array",
+        "items": { "$ref": "#/definitions/asset" }
+      }
+  },
+
+  "required": ["id"]
+}

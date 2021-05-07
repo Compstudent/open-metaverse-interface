@@ -1,2 +1,4 @@
-# open-metaverse-interop
-Definitely *not* an interoperable standard for the Metaverse.
+# open-metaverse-interface
+Definitely *not* an interface for an interoperable Metaverse.
+
+Currently in prototyping stage. PRs *extremely* welcome.
